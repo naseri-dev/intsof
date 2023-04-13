@@ -3,20 +3,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Users
 {
-	public class Repository : IRepository
+	public class UserRepository : IUserRepository
 	{
 		private readonly AppDbContext _dbContext;
 
-		public Repository(AppDbContext dbContext)
+		public UserRepository(AppDbContext dbContext)
 		{
-			this._dbContext = dbContext;
+			_dbContext = dbContext;
 		}
 		public void Add(User user)
 		{
 			_dbContext.Set<User>().Add(user);
 		}
 
-		public async Task<User?> GetByIdAsync(Guid id)
+		public async Task<User?> GetByIdAsync(UserId id)
 		{
 			return await _dbContext
 				.Set<User>()

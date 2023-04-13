@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Domain.Users
 {
-	public interface IRepository
+	public interface IUserRepository
 	{
 		void Add(User user);
 		void Update(User user);
-		Task<User?> GetByIdAsync(Guid id);
+		Task<User?> GetByIdAsync(UserId id);
 	}
 
 }

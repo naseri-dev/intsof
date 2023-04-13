@@ -17,7 +17,7 @@ namespace Infrastructure
 				options.UseSqlServer(configuration.GetConnectionString("Default"));
 			});
 
-			services.AddScoped<IRepository, Repository>();
+			services.AddScoped<IUserRepository, UserRepository>();
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
 			services.AddScoped<AppDbContext>();
 

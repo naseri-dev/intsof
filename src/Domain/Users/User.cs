@@ -3,11 +3,11 @@
 	public class User
 	{
 		private User() { }
-		public static User Create(Guid id,
-			string firstName,
-			string lastName,
-			string nationalCode,
-			string phoneNumber)
+		public static User Create(UserId id,
+			FirstName firstName,
+			LastName lastName,
+			NationalCode nationalCode,
+			PhoneNumber phoneNumber)
 		{
 			var user = new User();
 			user.Id = id;
@@ -18,22 +18,22 @@
 
 			return user;
 		}
-		public Guid Id { get; private set; }
-		public string FirstName { get; private set; } = string.Empty;
-		public string LastName { get; private set; } = string.Empty;
-		public string NationalCode { get; private set; } = string.Empty;
-		public string PhoneNumber { get; private set; } = string.Empty;
+		public UserId Id { get; private set; }
+		public FirstName FirstName { get; private set; }
+		public LastName LastName { get; private set; }
+		public NationalCode NationalCode { get; private set; }
+		public PhoneNumber PhoneNumber { get; private set; }
 
-		public void SetName(string firstName, string lastName)
+		public void SetName(FirstName firstName, LastName lastName)
 		{
 			FirstName = firstName;
 			LastName = lastName;
 		}
-		public void SetNationalCode(string nationalCode)
+		public void SetNationalCode(NationalCode nationalCode)
 		{
 			NationalCode = nationalCode;
 		}
-		public void SetPhoneNumber(string phoneNumber)
+		public void SetPhoneNumber(PhoneNumber phoneNumber)
 		{
 			PhoneNumber = phoneNumber;
 		}
