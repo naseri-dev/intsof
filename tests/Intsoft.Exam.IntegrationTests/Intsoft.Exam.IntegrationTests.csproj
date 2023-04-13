@@ -21,8 +21,4 @@
 		</PackageReference>
 	</ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\..\src\Intsoft.Exam.API\Intsoft.Exam.API.csproj" />
-	</ItemGroup>
-
 </Project>
