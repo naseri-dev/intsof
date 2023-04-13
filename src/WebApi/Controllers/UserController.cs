@@ -28,7 +28,7 @@ namespace Intsoft.Exam.API.Controllers
 			return Ok(id);
 		}
 
-		[HttpGet("id:guid")]
+		[HttpGet("{id:guid}")]
 		public async Task<ActionResult<UserDto>> Get(Guid id)
 		{
 			var dto = await _mediator.Send(new GetUserByIdQuery(id));
